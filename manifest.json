@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Twitter Newsfeed Eradicator",
+  "description": "This extension displays all of Twitter except the newsfeed.",
+  "version": "1.0",
+  "permissions": ["tabs",
+                "activeTab"],
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "browser_action": {
+    "default_icon": "quiet-bird.png",
+    "default_title": "Quiet"
+  },
+  "content_scripts": [
+  {
+    "matches": ["https://twitter.com/"],
+    "css": ["clean.css"],
+    "js": ["clean.js"]
+  }
+]
+}
