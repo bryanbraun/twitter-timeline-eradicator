@@ -1,0 +1,10 @@
+/* we hide everything by default and then conditionally enable them. This prevent a flash of content before it gets hidden. */
+
+.wrapper-home .stream-container {
+  visibility: hidden;
+}
+
+.MomentsGuidePage-content,
+.MomentGuideNavigation {
+  visibility: hidden;
+}
