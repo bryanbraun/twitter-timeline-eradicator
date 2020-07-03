@@ -1,10 +1,45 @@
-/* we hide everything by default and then conditionally enable them. This prevent a flash of content before it gets hidden. */
+/* We hide everything by default and then conditionally enable them by
+   adding new stylesheets. This prevent a flash of content before it gets hidden. */
 
-.wrapper-home .stream-container {
+/* Hide all primaryColumn contents */
+[data-testid="primaryColumn"] > div > div:last-child {
   visibility: hidden;
 }
 
-.MomentsGuidePage-content,
-.MomentGuideNavigation {
+/* Hide trending now (sidebar item) */
+[aria-label="Timeline: Trending now"] {
   visibility: hidden;
+}
+
+/* Selectively show some useful parts */
+
+/* Show Notifications */
+[aria-label="Timeline: Notifications"] {
+  visibility: visible;
+}
+[aria-label="Timeline: Retweeted"] {
+  visibility: visible;
+}
+[aria-label="Timeline: Liked"] {
+  visibility: visible;
+}
+
+/* Show the "individual tweet" page content */
+[aria-label="Timeline: Conversation"] {
+  visibility: visible;
+}
+
+/* Show Profile details */
+[href$="/header_photo"],
+[href$="/header_photo"] + div {
+  visibility: visible;
+}
+[aria-label="Profile timelines"],
+[aria-label="Profile timelines"] + div {
+  visibility: visible;
+}
+
+/* Show Search results */
+[aria-label="Timeline: Search timeline"] {
+  visibility: visible;
 }

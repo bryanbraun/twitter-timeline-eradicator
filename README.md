@@ -1,2 +1,2 @@
-# twitter-newsfeed-eradicator
-This Chrome Extension displays all of Twitter except the Newsfeed. 
+# Twitter Timeline Eradicator
+This extension removes timelines from twitter, to help you avoid mindless consumption.

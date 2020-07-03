@@ -1,0 +1,4 @@
+/* Override the hidden Trending Now box */
+[aria-label="Timeline: Trending now"] {
+  visibility: visible !important;
+}
