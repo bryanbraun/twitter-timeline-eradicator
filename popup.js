@@ -1,11 +1,13 @@
 var settingsForm = document.querySelector("#settings-form");
 var settingsCheckboxes = document.querySelectorAll("input[type=checkbox]");
 
-// Prepopulate Settings
+// Pre-populate Settings
 chrome.storage.sync.get(null, function(settingsObj) {
   Object.keys(settingsObj).forEach(function(settingId) {
     var settingEl = document.querySelector("#" + settingId);
-    settingEl.checked = settingsObj[settingId];
+    if (settingEl) {
+      settingEl.checked = settingsObj[settingId];
+    }
   });
 });
 
@@ -18,7 +20,7 @@ settingsCheckboxes.forEach(function(el) {
       settings[formEl.id] = formEl.checked;
     }
     chrome.storage.sync.set(settings, function() {
-      // console.log("settings stored")
+      // console.log("settings stored", settings)
     });
   });
 });

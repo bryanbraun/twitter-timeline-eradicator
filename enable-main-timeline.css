@@ -1,3 +1,4 @@
-.wrapper-home .stream-container {
+/* Override the hidden primary column */
+[data-testid="primaryColumn"] > div > div:last-child {
   visibility: visible !important;
 }

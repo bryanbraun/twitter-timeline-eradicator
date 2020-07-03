@@ -2,8 +2,8 @@ chrome.storage.sync.get(null, function(settingsObj) {
   if (settingsObj["disable-main-timeline"] === false) {
     embedCSSFile("enable-main-timeline.css");
   }
-  if (settingsObj["disable-moments"] === false) {
-    embedCSSFile("enable-moments.css");
+  if (settingsObj["disable-trending"] === false) {
+    embedCSSFile("enable-trending.css");
   }
 });
 

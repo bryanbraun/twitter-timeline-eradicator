@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "Twitter Newsfeed Eradicator",
-  "description": "This extension displays all of Twitter except the newsfeed.",
-  "version": "1.0.1",
+  "name": "Twitter Timeline Eradicator",
+  "description": "This extension removes timelines from twitter, to help you avoid mindless consumption.",
+  "version": "2.0.0",
   "permissions": ["activeTab", "storage", "https://twitter.com/"],
   "browser_action": {
     "default_icon": "quiet-bird.png",
     "default_popup": "popup.html",
-    "default_title": "Twitter Newsfeed Eradicator"
+    "default_title": "Twitter Timeline Eradicator"
   },
   "content_scripts": [
     {
@@ -17,5 +17,5 @@
       "css": ["default.css"]
     }
   ],
-  "web_accessible_resources": ["enable-main-timeline.css", "enable-moments.css"]
+  "web_accessible_resources": ["enable-main-timeline.css", "enable-trending.css"]
 }
