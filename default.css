@@ -28,6 +28,11 @@
 [aria-label="Timeline: Conversation"] {
   visibility: visible;
 }
+[aria-label="Timeline: Tweet"] > div > div > div:nth-child(2) {
+  /* this one is targeted, so we don't see "More Tweets" */
+  visibility: visible;
+}
+
 
 /* Show Profile details */
 [href$="/header_photo"],
