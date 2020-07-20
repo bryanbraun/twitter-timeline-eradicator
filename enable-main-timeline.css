@@ -1,4 +1,8 @@
-/* Override the hidden primary column */
-[data-testid="primaryColumn"] > div > div:last-child {
+/* Override the hidden main timelines */
+[aria-label="Timeline: Your Home Timeline"] {
+  visibility: visible !important;
+}
+
+[aria-label="Timeline: Explore"] {
   visibility: visible !important;
 }
