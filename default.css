@@ -48,3 +48,8 @@
 [aria-label="Timeline: Search timeline"] {
   visibility: visible;
 }
+
+/* Show the Following/Followers List */
+[aria-label="Timeline: Followers"] {
+  visibility: visible;
+}
